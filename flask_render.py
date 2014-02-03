@@ -60,7 +60,7 @@ def page_not_found(e):
 
 
 @cache.cached(timeout=50)
-@app.route('/')
+@app.route('/club')
 def index():
     return render_template('index.html')
 
