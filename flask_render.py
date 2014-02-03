@@ -56,7 +56,7 @@ assets.register('js', js)
 @app.errorhandler(404)
 def page_not_found(e):
         # return render_template('modal.html'), 404
-        return "YOU GOT A 404 --Page Does Not Exist", 404
+        return "This developer is too lazy to write a 404 :D", 404
 
 
 @cache.cached(timeout=50)
