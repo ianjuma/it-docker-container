@@ -66,7 +66,5 @@ def index():
 
 
 if __name__ == '__main__':
-    import newrelic.agent
-    newrelic.agent.initialize('newrelic.ini')
     app.run(port=8000, debug=True, host='0.0.0.0')
     # This can be omitted if using gevent wrapped around gunicorn
