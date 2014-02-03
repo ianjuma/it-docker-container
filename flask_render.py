@@ -6,11 +6,7 @@ from flask import Flask
 from flask import render_template
 from flask.ext.assets import Environment, Bundle
 from flask.ext.cache import Cache
-# Caching implemented is Caching of Just Views --Database
 # from flask import redirect
-# from flask.ext.sqlalchemy import SQLAlchemy
-# from flask import session
-# from flask_oauth import OAuth
 
 """
 RestLess -> JSON -> Oauth2 -> API
