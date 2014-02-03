@@ -1,0 +1,54 @@
+@charset 'UTF-8';
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1 {
+	text-align: center;
+  display: inline-block;
+  font-size: 1.5em;
+  font-family: 'Lato';
+}
+
+.default-spacer {
+  margin-top: 7.2px;
+  margin-bottom: 7.2px;
+}
+
+/*
+body { 
+  background-image:url('term.gif');
+  background-repeat: no-repeat;
+}
+*/
+
+#reg {
+  padding-top: 47px;
+  padding-left: 520px;
+}
+
+/*
+body {
+	background-color: white;
+}
+*/
+
+header {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 2em;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-top-left-radius: 8px;
+  border-top-left-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-top-right-radius: 8px;
+  border-top-right-radius: 8px; 
+}
+
+#betaForm {
+  padding-top: 0px;
+}
