@@ -42,3 +42,29 @@ function check_sanity {
 function install_docker {
     check_install docker docker
 }
+
+function update {
+    apt-get update
+    apt-get dist-upgrade
+}
+
+function docker_postgres {
+    docker run -i -t ubuntu /bin/bash
+    update
+    apt-get install python-software-properties
+    apt-get install software-properties-common
+    add-apt-repository ppa:pitti/postgresql
+    apt-get update
+    apt-get -y install postgresql-9.2 postgresql-client-9.2 postgresql-contrib-9.2
+}
+
+function setup_docker {
+    sudo -u postgres createuser -P -d -r -s docker
+    sudo -u postgres createdb -O docker docker
+}
+
+update
+install_docker
+docker_postgres
+setup_docker
+check_sanity
