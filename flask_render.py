@@ -48,14 +48,10 @@ cache.config = {'CACHE_DEFAULT_TIMEOUT': '5'}
 
 # app.config.from_pyfile(flask-config.cfg) -- import Config
 assets = Environment(app)
-css = Bundle('bootstrap.css', ' bootstrap.min.css',
-             'bootstrap-responsive.css', 'bootstrap-responsive.min.css')
+css = Bundle('cardui.css', ' normalize.css',
+             'semantic.min.css', 'pace.css', 'style.css')
 js = Bundle(
-    'bootstrap.js', 'bootstrap.min.js', 'jquery.js', 'bootstrap-typeahead.js',
-    'bootstrap-carousel.js', 'bootstrap-collapse.js', 'bootstrap-button.js',
-    'bootstrap-popover.js', 'bootstrap-tooltip.js', 'bootstrap-tab.js',
-    'bootstrap-scrollspy', 'bootstrap-dropdown.js', 'bootstrap-modal.js', 'bootstrap-alert.js',
-    'bootstrap-transition.js')
+    'semantic.min.js', 'jquery.min.js', 'pace.min.js')
 
 assets.register('css', css)
 assets.register('js', js)
@@ -70,31 +66,7 @@ def page_not_found(e):
 @cache.cached(timeout=50)
 @app.route('/')
 def index():
-    return render_template('bootstrap.html')
-
-
-@cache.cached(timeout=50, key_prefix='all_comments')
-@app.route('/form')
-def form():
-    return render_template('form.html')
-
-
-@cache.cached(timeout=50)
-@app.route('/footer')
-def footer():
-    return render_template('footer.html')
-
-
-@cache.cached(timeout=5000)
-@app.route('/modal')
-def modal():
-    return render_template('modal.html')
-
-
-@cache.cached(timeout=50)
-@app.route('/login')
-def login(name=None):
-    return render_template('bootstrap.html')
+    return render_template('index.html')
 
 
 if __name__ == '__main__':
