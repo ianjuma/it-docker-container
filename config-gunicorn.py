@@ -9,7 +9,7 @@ def numCPUs():
     return os.sysconf('SC_NPROCESSORS_ONLN')
 """
 
-bind = '127.0.0.1:5000'
+bind = '0.0.0.0:5000'
 workers = 4
 # backlog = 2048
 # worker_class = 'sync'
